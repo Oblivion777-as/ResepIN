@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResepIN - Aplikasi Resep Makanan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ResepIN</h1>
+            <p class="tagline">Temukan resep makanan favoritmu</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Cari resep...">
+                <button id="search-btn">Cari</button>
+            </div>
+            <div class="ingredients-filter">
+                <input type="text" id="ingredient-input" placeholder="Tambahkan bahan yang kamu punya...">
+                <button id="add-ingredient-btn">Tambah</button>
+                <div class="ingredients-tags" id="ingredients-tags"></div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <button id="filter-btn">Filter Berdasarkan Bahan</button>
+            <button id="reset-btn">Reset Filter</button>
+            <button id="show-favorites-btn">Tampilkan Favorit</button>
+        </section>
+
+        <section class="recipes-section">
+            <h2>Daftar Resep</h2>
+            <div class="recipes-container" id="recipes-container"></div>
+        </section>
+    </main>
+
+    <div class="modal" id="recipe-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <div class="modal-body">
+                <div class="ingredients-section">
+                    <h3>Bahan-bahan</h3>
+                    <ul id="modal-ingredients"></ul>
+                </div>
+                <div class="steps-section">
+                    <h3>Langkah-langkah</h3>
+                    <ol id="modal-steps"></ol>
+                </div>
+            </div>
+            <button id="favorite-btn">Tambahkan ke Favorit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
